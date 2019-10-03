@@ -18,6 +18,7 @@ if (entrada <= 1) {
         nome = prompt("Qual o seu nome?");
     } while (nome == null || nome == "");
     jogadorNome.innerHTML = nome;
+    entrada++;
 }
 
 function jogar(jogadorEscolha) {

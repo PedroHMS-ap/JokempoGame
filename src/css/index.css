@@ -83,7 +83,7 @@ ul#computadorEscolha li a.selecionado {
 #jogadorPlacar,
 #computadorPlacar {
     position: absolute;
-    font-size: 22px
+    font-size: 50px
 }
 
 #computadorNome {
