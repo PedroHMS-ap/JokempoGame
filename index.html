@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Jokempô</title>
     <link rel="stylesheet" href="src/css/index.css">
-    <link rel="icon" href="img/jokenpo-pedra-papel-e-tesoura.png">
+    <link rel="icon" href="images/jokenpo-pedra-papel-e-tesoura.png">
 </head>
 
 <body>
@@ -13,26 +13,26 @@
         <h1 id="titulo">Jokempô</h1>
         <div id="placar">
             <div id="jogador">
-                <h2 id="jogadorNome">Pedro</h2>
+                <h2 id="jogadorNome">Você</h2>
                 <span id="jogadorPlacar">0</span>
 
                 <ul id="jogadorEscolha">
-                    <li> <a id="jogadorEscolha1" onclick="jogar(1)"><img src="img/papel.png" alt="papel"></a></li>
-                    <li> <a id="jogadorEscolha2" onclick="jogar(2)"><img src="img/pedra.png" alt="pedra"></a></li>
-                    <li> <a id="jogadorEscolha3" onclick="jogar(3)"><img src="img/tesoura.png" alt="tesoura"></a></li>
+                    <li> <a id="jogadorEscolha1" onclick="jogar(1)"><img src="images/papel.png" alt="papel"></a></li>
+                    <li> <a id="jogadorEscolha2" onclick="jogar(2)"><img src="images/pedra.png" alt="pedra"></a></li>
+                    <li> <a id="jogadorEscolha3" onclick="jogar(3)"><img src="images/tesoura.png" alt="tesoura"></a></li>
                 </ul>
             </div>
 
             <div id="versus">VS</div>
 
             <div id="computador">
-                <h2 id="computadorNome">Maquina</h2>
+                <h2 id="computadorNome">Máquina</h2>
                 <span id="computadorPlacar">0</span>
 
                 <ul id="computadorEscolha">
-                    <li> <a id="computadorEscolha1"><img src="img/papel.png" alt="papel"></a></li>
-                    <li> <a id="computadorEscolha2"><img src="img/pedra.png" alt="pedra"></a></li>
-                    <li> <a id="computadorEscolha3"><img src="img/tesoura.png" alt="tesoura"></a></li>
+                    <li> <a id="computadorEscolha1"><img src="images/papel.png" alt="papel"></a></li>
+                    <li> <a id="computadorEscolha2"><img src="images/pedra.png" alt="pedra"></a></li>
+                    <li> <a id="computadorEscolha3"><img src="images/tesoura.png" alt="tesoura"></a></li>
                 </ul>
             </div>
         </div>
@@ -40,88 +40,7 @@
         <div id="mensagens">&nbsp;</div>
     </div>
 
-    <script>
-
-        var jogadorEscolha = 0;
-        var jogadorPontuacao = 0;
-        var computadorEscolha = 0;
-        var computadorPontuacao = 0;
-        var ganhador = -1;
-
-
-        function jogar(escolha) {
-            jogadorEscolha = escolha;
-
-            computadorEscolha = Math.floor((Math.random() * (3 - 1 + 1))) + 1;
-
-            //1 - Papel
-            //2 - Pedra
-            //3 - Tesoura
-
-            if ((jogadorEscolha == 1) && (computadorEscolha == 1)) {
-                ganhador = 0;
-            }
-            else if ((jogadorEscolha == 1) && (computadorEscolha == 2)) {
-                ganhador = 1;
-                jogadorPontuacao++;
-            }
-            else if ((jogadorEscolha == 1) && (computadorEscolha == 3)) {
-                ganhador = 2;
-                computadorPontuacao++;
-            }
-
-
-            if ((jogadorEscolha == 2) && (computadorEscolha == 1)) {
-                ganhador = 2;
-                computadorPontuacao++;
-            }
-            else if ((jogadorEscolha == 2) && (computadorEscolha == 2)) {
-                ganhador = 0;
-            }
-            else if ((jogadorEscolha == 2) && (computadorEscolha == 3)) {
-                ganhador = 1;
-                jogadorPontuacao++;
-            }
-
-
-            if ((jogadorEscolha == 3) && (computadorEscolha == 1)) {
-                ganhador = 1;
-                jogadorPontuacao++;
-            }
-            else if ((jogadorEscolha == 3) && (computadorEscolha == 2)) {
-                ganhador = 2;
-                computadorPontuacao++;
-            }
-            else if ((jogadorEscolha == 3) && (computadorEscolha == 3)) {
-                ganhador = 0;
-            }
-
-            document.getElementById("computadorEscolha1").classList.remove('selecionado');
-            document.getElementById("computadorEscolha2").classList.remove('selecionado');
-            document.getElementById("computadorEscolha3").classList.remove('selecionado');
-
-            document.getElementById("jogadorEscolha1").classList.remove('selecionado');
-            document.getElementById("jogadorEscolha2").classList.remove('selecionado');
-            document.getElementById("jogadorEscolha3").classList.remove('selecionado');
-
-            document.getElementById("jogadorEscolha" + jogadorEscolha).classList.add('selecionado');
-            document.getElementById("computadorEscolha" + computadorEscolha).classList.add('selecionado');
-
-            if (ganhador == 0){
-                document.getElementById('mensagens').innerHTML = 'Empate';
-            }
-            else if (ganhador == 1){
-                document.getElementById('mensagens').innerHTML = 'Jogador Ganhou';
-            }
-            if (ganhador == 2){
-                document.getElementById('mensagens').innerHTML = 'Maquina Ganhou';
-            }
-            
-            document.getElementById('jogadorPlacar').innerHTML = jogadorPontuacao;
-            document.getElementById('computadorPlacar').innerHTML = computadorPontuacao;
-        }
-
-    </script>
+    <script src="src/js/index.js"></script>
 </body>
 
 </html>

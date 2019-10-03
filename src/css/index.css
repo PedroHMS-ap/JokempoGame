@@ -1,80 +1,93 @@
 * {
     font-family: 'Courier New', Courier, monospace;
-    font-weight: 400;
+    font-weight: 400
+}
+
+#jogadorEscolha li a {
+    cursor: pointer
 }
 
 #placar {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
-#jogador, #computador {
+#jogador,
+#computador {
     position: relative;
     flex-grow: 1;
     border-radius: 8px;
     width: 200px;
     padding: 15;
-    color: aliceblue;
+    color: aliceblue
 }
 
 #jogador {
-    background-color: #D43D47;
+    background-color: #D43D47
 }
 
 #computador {
-    background-color: #4D7D94;
+    background-color: #4D7D94
 }
 
-ul#jogadorEscolha, ul#computadorEscolha {
+ul#jogadorEscolha,
+ul#computadorEscolha {
     list-style: nome;
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: center
 }
 
-ul#jogadorEscolha li, ul#computadorEscolha li {
-    display: inline;
+ul#jogadorEscolha li,
+ul#computadorEscolha li {
+    display: inline
 }
 
-ul#jogadorEscolha li a img, ul#computadorEscolha li a img {
-    max-width: 80px;
+ul#jogadorEscolha li a img,
+ul#computadorEscolha li a img {
+    max-width: 80px
 }
 
-ul#jogadorEscolha li a, ul#computadorEscolha li a {
-    opacity: .2;
+ul#jogadorEscolha li a,
+ul#computadorEscolha li a {
+    opacity: .2
 }
 
-ul#jogadorEscolha li a:hover, ul#jogadorEscolha li a.selecionado, ul#computadorEscolha li a.selecionado {
-    opacity: 1;
+ul#jogadorEscolha li a:hover,
+ul#jogadorEscolha li a.selecionado,
+ul#computadorEscolha li a.selecionado {
+    opacity: 1
 }
 
 #versus {
     width: 60px;
     text-align: center;
-    font-size: 30px;
+    font-size: 30px
 }
 
-#jogadorNome, #computadorNome {
+#jogadorNome,
+#computadorNome {
     margin: 0;
-    padding: 2px;
+    padding: 2px
 }
 
 #jogadorNome {
-    text-align: right;
+    text-align: right
 }
 
 #jogadorPlacar {
-    right: 20px;
+    right: 20px
 }
 
-#jogadorPlacar, #computadorPlacar {
+#jogadorPlacar,
+#computadorPlacar {
     position: absolute;
-    font-size: 22px;
+    font-size: 22px
 }
 
 #computadorNome {
-    text-align: left;
+    text-align: left
 }
 
 #mensagens {
@@ -83,7 +96,7 @@ ul#jogadorEscolha li a:hover, ul#jogadorEscolha li a.selecionado, ul#computadorE
     padding: 15;
     text-align: center;
     margin: 20 2;
-    font-size: 30px;
+    font-size: 30px
 }
 
 #titulo {
@@ -92,5 +105,5 @@ ul#jogadorEscolha li a:hover, ul#jogadorEscolha li a.selecionado, ul#computadorE
     padding: 15;
     font-size: 30px;
     margin: 20 2;
-    text-align: center;
+    text-align: center
 }
