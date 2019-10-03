@@ -7,9 +7,18 @@ const jogadorEscolha3 = document.querySelector('#jogadorEscolha3');
 const mensagens = document.querySelector('#mensagens');
 const jogadorPlacar = document.querySelector('#jogadorPlacar');
 const computadorPlacar = document.querySelector('#computadorPlacar');
+const jogadorNome = document.querySelector('#jogadorNome')
 
 let jogadorPontuacao = 0;
 let computadorPontuacao = 0;
+let entrada = 0;
+
+if (entrada <= 1) {
+    do {
+        nome = prompt("Qual o seu nome?");
+    } while (nome == null || nome == "");
+    jogadorNome.innerHTML = nome;
+}
 
 function jogar(jogadorEscolha) {
     const computadorEscolha = Math.floor((Math.random() * (3 - 1 + 1))) + 1;
